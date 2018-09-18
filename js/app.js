@@ -137,8 +137,17 @@ const bondFilms = [
 
 
 // 5.
-let bondTitles = [];
+// let bondTitles = [];
+// for (let i = 0; i < bondFilms.length; i++){
+//     bondTitles.push(bondFilms[i].title);
+// }
+// console.log(bondTitles);
+
+// 6.
+let oddBonds = [];
 for (let i = 0; i < bondFilms.length; i++){
-    bondTitles.push(bondFilms[i].title);
+    if (bondFilms[i].year % 2 !== 0){
+        oddBonds.push(bondFilms[i]);
+    }
 }
-console.log(bondTitles);
+console.log(oddBonds);
