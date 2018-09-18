@@ -144,10 +144,24 @@ const bondFilms = [
 // console.log(bondTitles);
 
 // 6.
-let oddBonds = [];
+// let oddBonds = [];
+// for (let i = 0; i < bondFilms.length; i++){
+//     if (bondFilms[i].year % 2 !== 0){
+//         oddBonds.push(bondFilms[i]);
+//     }
+// }
+// console.log(oddBonds);
+
+// 7.
+let bondGross = 0;
+
 for (let i = 0; i < bondFilms.length; i++){
-    if (bondFilms[i].year % 2 !== 0){
-        oddBonds.push(bondFilms[i]);
-    }
+    let newStr = bondFilms[i].gross.replace(/,/gi, "").replace("$","");
+    bondGross += parseInt(newStr, 10)
 }
-console.log(oddBonds);
+console.log(bondGross);
+
+// find the total gross
+// change it to a number (parseInt)
+// push it to totalGross
+// add to the total in totalGross
